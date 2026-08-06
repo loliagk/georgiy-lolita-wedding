@@ -13,18 +13,22 @@ body {
     background: #faf8f5;
     color: #2d2d2d;
 }
-
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
     background:
     linear-gradient(
-    rgba(250,248,245,0.7),
-    rgba(250,248,245,0.7)
-    );
+    rgba(250,248,245,0.45),
+    rgba(250,248,245,0.65)
+    ),
+    url("photo1.jpg");
+
+    background-size: cover;
+    background-position: center;
 }
 
 .content {
@@ -106,7 +110,7 @@ font-size:38px;
 самый важный день нашей жизни
 </div>
 
-<button>
+<button onclick="document.getElementById('invite').scrollIntoView()">
 Открыть приглашение
 </button>
 
@@ -114,5 +118,21 @@ font-size:38px;
 
 </section>
 
-</body>
+<section id="invite" style="height:100vh; display:flex; justify-content:center; align-items:center; text-align:center;">
+
+<div>
+<h2>Дорогие родные и друзья!</h2>
+
+<p>
+Мы будем счастливы разделить с вами<br>
+самый важный день нашей жизни.
+</p>
+
+<p>
+12 сентября 2026
+</p>
+
+</div>
+
+</section>
 </html>
