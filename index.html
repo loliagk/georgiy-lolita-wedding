@@ -869,16 +869,29 @@ margin-top:15px;
 position:relative;
 z-index:2;
 margin-top:30px;
-padding:35px 20px;
-border:1px solid rgba(140,119,96,.35);
+padding:45px 25px;
+border:1px solid rgba(140,119,96,.45);
+background:#fffaf3;
 }
 
 .names-date:before{
 content:"";
 position:absolute;
-inset:10px;
-border:1px solid rgba(140,119,96,.18);
+inset:12px;
+border:1px solid rgba(140,119,96,.25);
 pointer-events:none;
+}
+
+.names-date:after{
+content:"✦";
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#fffaf3;
+padding:0 15px;
+color:#8c7760;
+font-size:18px;
 }
 
 .names-date h1,
