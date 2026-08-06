@@ -301,3 +301,211 @@ transform:translateY(0);
 
 
 </section>
+
+<section class="invite hidden">
+
+
+<div class="invite-content">
+
+
+<h1>
+Дорогие родные и друзья!
+</h1>
+
+
+<p>
+С огромной радостью приглашаем вас разделить
+<br>
+с нами самый важный день нашей жизни —
+<br>
+день нашей свадьбы.
+</p>
+
+
+<div class="line"></div>
+
+
+<h2>
+12 сентября 2026
+</h2>
+
+
+<p>
+Будем счастливы видеть вас рядом
+<br>
+в этот особенный день 🤍
+</p>
+
+
+
+<h3>
+ПРОГРАММА ДНЯ
+</h3>
+
+
+<p>
+
+16:00
+<br>
+Сбор гостей
+
+<br><br>
+
+17:00
+<br>
+Фотосессия с невестой
+
+<br><br>
+
+17:45
+<br>
+Мыдыкъус
+
+<br><br>
+
+19:40
+<br>
+Церемония
+
+<br><br>
+
+20:50
+<br>
+Торт
+
+</p>
+
+
+
+<div class="line"></div>
+
+
+<h3>
+МЕСТО ПРОВЕДЕНИЯ
+</h3>
+
+
+<p>
+Банкет Холл
+<br>
+Коцоева, 75
+<br>
+Владикавказ
+</p>
+
+
+<a class="map"
+href="https://maps.google.com"
+target="_blank">
+ОТКРЫТЬ КАРТУ
+</a>
+
+
+
+<div class="line"></div>
+
+
+<h3>
+ДО НАШЕЙ ВСТРЕЧИ ОСТАЛОСЬ
+</h3>
+
+
+<div id="timer">
+Загрузка...
+</div>
+
+
+
+<div class="line"></div>
+
+
+<h3>
+НАШИ МОМЕНТЫ
+</h3>
+
+
+<p>
+Фотографии будут добавлены 🤍
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+function openInvite(){
+
+document.querySelector(".envelope")
+.classList.add("open");
+
+
+setTimeout(function(){
+
+document.querySelector(".hero").style.display="none";
+
+document.querySelector(".invite")
+.classList.remove("hidden");
+
+
+},900);
+
+
+}
+
+
+
+let weddingDate = new Date("September 12, 2026 16:00:00").getTime();
+
+
+setInterval(function(){
+
+
+let now = new Date().getTime();
+
+let distance = weddingDate - now;
+
+
+let days = Math.floor(distance / (1000*60*60*24));
+
+let hours = Math.floor(
+(distance % (1000*60*60*24))
+/ (1000*60*60)
+);
+
+
+let minutes = Math.floor(
+(distance % (1000*60*60))
+/ (1000*60)
+);
+
+
+let seconds = Math.floor(
+(distance % (1000*60))
+/ 1000
+);
+
+
+document.getElementById("timer").innerHTML =
+
+days + " дней " +
+hours + " часов " +
+minutes + " минут " +
+seconds + " секунд";
+
+
+},1000);
+
+
+</script>
+
+
+</body>
+
+</html>
