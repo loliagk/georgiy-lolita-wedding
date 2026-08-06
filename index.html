@@ -16,7 +16,46 @@
 box-sizing:border-box;
 }
 
+.gallery{
 
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:40px;
+
+}
+
+
+.gallery img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+
+.gallery img:hover{
+
+transform:scale(1.03);
+
+}
+
+
+@media(max-width:600px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+
+.gallery img{
+height:300px;
+}
+
+}
 body{
 margin:0;
 background:#faf7f2;
@@ -423,11 +462,21 @@ target="_blank">
 НАШИ МОМЕНТЫ
 </h3>
 
+<h3>
+НАШИ МОМЕНТЫ
+</h3>
 
-<p>
-Фотографии будут добавлены 🤍
-</p>
 
+<div class="gallery">
+
+<img src="IMG_0252.JPG">
+<img src="IMG_0261.JPG">
+<img src="IMG_0593.JPG">
+<img src="IMG_0605.JPG">
+<img src="IMG_0651.JPG">
+<img src="IMG_0670.JPG">
+
+</div>
 
 
 </div>
