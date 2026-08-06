@@ -81,14 +81,23 @@ height:100svh;
 
 
 .envelope{
-width:300px;
-height:210px;
+width:320px;
+height:220px;
 }
 
 
-.names{
-font-size:34px;
-letter-spacing:5px;
+.envelope-content .names{
+font-size:48px;
+letter-spacing:8px;
+white-space:nowrap;
+}
+
+
+.open-text{
+font-size:10px;
+letter-spacing:2px;
+}
+
 }
 
 
@@ -283,12 +292,11 @@ z-index:3;
 .envelope.open:before{
 
 transform:rotateX(180deg);
+perspective:1000px;
 
 }
 .envelope.open{
-
-transform:scale(1.03);
-
+transform:scale(1.05) translateY(-20px);
 }
 
 .envelope.open:after{
