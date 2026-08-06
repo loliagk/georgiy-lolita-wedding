@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Георгий & Лолита | 12.09.2026</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    background: #faf8f5;
+    color: #2d2d2d;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+    linear-gradient(
+    rgba(250,248,245,0.7),
+    rgba(250,248,245,0.7)
+    );
+}
+
+.content {
+    animation: fade 2s ease;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    margin: 0;
+}
+
+.date {
+    margin-top: 30px;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.text {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid #2d2d2d;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #2d2d2d;
+    color:white;
+}
+
+@keyframes fade {
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:600px){
+h1{
+font-size:38px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="content">
+
+<h1>
+ГЕОРГИЙ<br>
+&
+<br>
+ЛОЛИТА
+</h1>
+
+<div class="date">
+12 • 09 • 2026
+</div>
+
+<div class="text">
+Приглашаем вас разделить<br>
+самый важный день нашей жизни
+</div>
+
+<button>
+Открыть приглашение
+</button>
+
+</div>
+
+</section>
+
+</body>
+</html>
