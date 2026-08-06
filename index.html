@@ -792,8 +792,6 @@ margin:0 auto 60px;
 
 position:relative;
 
-overflow:hidden;
-
 border:1px solid rgba(140,119,96,.45);
 
 box-shadow:
@@ -802,7 +800,7 @@ box-shadow:
 }
 
 
-/* внутренняя рамка */
+/* двойная элегантная рамка */
 
 .invite-card:before{
 
@@ -819,7 +817,22 @@ pointer-events:none;
 }
 
 
-/* имена и дата поверх рамки */
+.invite-card:after{
+
+content:"";
+
+position:absolute;
+
+inset:25px;
+
+border:1px solid rgba(140,119,96,.18);
+
+pointer-events:none;
+
+}
+
+
+/* имя и дата */
 
 .invite-card h1,
 .invite-card h2{
@@ -830,19 +843,25 @@ z-index:2;
 
 }
 
-.invite-card:after{
 
-content:"";
+.invite-card h1{
 
-position:absolute;
+margin-top:20px;
 
-inset:25px;
+font-size:42px;
 
-border-top:1px solid rgba(140,119,96,.25);
+letter-spacing:7px;
 
-border-bottom:1px solid rgba(140,119,96,.25);
+}
 
-pointer-events:none;
+
+.invite-card h2{
+
+font-size:30px;
+
+letter-spacing:6px;
+
+margin-top:15px;
 
 }
 .program{
@@ -959,6 +978,8 @@ G & L
 
 <img class="main-photo" src="IMG_0261.JPG">
 
+<div class="names-date">
+
 <h1>
 ГЕОРГИЙ & ЛОЛИТА
 </h1>
@@ -966,6 +987,8 @@ G & L
 <h2>
 12 • 09 • 2026
 </h2>
+
+</div>
 
 </div>
 
