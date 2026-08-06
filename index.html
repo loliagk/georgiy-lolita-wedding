@@ -733,6 +733,10 @@ type="text"
 name="Фамилия"
 placeholder="Ваша фамилия"
 required>
+<input 
+type="text" 
+name="Имена гостей"
+placeholder="Имена всех гостей">
 <select name="Ответ">
 
 <option value="Будем присутствовать">
@@ -745,12 +749,12 @@ required>
 
 </select>
 
-
 <input 
 type="number" 
 name="Количество гостей"
-placeholder="Количество гостей">
-
+placeholder="Количество гостей"
+min="1"
+required>
 
 <textarea 
 name="Комментарий"
