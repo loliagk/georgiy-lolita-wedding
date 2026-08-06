@@ -258,7 +258,11 @@ z-index:3;
 transform:rotateX(180deg);
 
 }
+.envelope.open{
 
+transform:scale(1.03);
+
+}
 
 .envelope.open:after{
 
@@ -273,8 +277,7 @@ transform:translateX(-50%) scale(.7);
 
 position:absolute;
 
-top:70%;
-
+top:68%;
 left:50%;
 
 transform:translate(-50%,-50%);
@@ -283,11 +286,24 @@ z-index:4;
 
 text-align:center;
 
+transition:1.2s ease;
+
+}
+
+
+.envelope.open .envelope-content{
+
+opacity:0;
+
+transform:
+translate(-50%,-80%)
+scale(.9);
+
 }
 
 .names{
 
-font-size:85px;
+font-size:110px;
 
 letter-spacing:18px;
 
@@ -296,7 +312,24 @@ font-weight:300;
 color:#8c7760;
 
 text-shadow:
-0 3px 6px rgba(0,0,0,.18);
+0 2px 5px rgba(0,0,0,.15);
+
+animation:softAppear 2s ease;
+
+}
+
+
+@keyframes softAppear{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
 
 }
 
@@ -464,11 +497,21 @@ margin:45px auto;
 
 font-family:'Montserrat',sans-serif;
 
-font-size:16px;
+font-size:18px;
 
-letter-spacing:2px;
+letter-spacing:3px;
 
-margin:30px 0;
+color:#8c7760;
+
+padding:25px;
+
+border-top:1px solid #d8c6aa;
+
+border-bottom:1px solid #d8c6aa;
+
+max-width:350px;
+
+margin:40px auto;
 
 }
 
@@ -586,37 +629,40 @@ background:#8c7760;
 }
 .music-btn{
 
-position:fixed;
-
-top:25px;
-right:25px;
-
-width:55px;
-height:55px;
+width:60px;
+height:60px;
 
 border-radius:50%;
 
-border:1px solid #d8c6aa;
-
 background:#fffaf3;
+
+border:1px solid #cdb89d;
 
 color:#8c7760;
 
-font-size:20px;
+font-size:24px;
 
-cursor:pointer;
-
-z-index:999;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-box-shadow:
-0 10px 25px rgba(0,0,0,.15);
+animation:pulse 2s infinite;
 
 }
 
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(140,119,96,.3);
+}
+
+70%{
+box-shadow:0 0 0 15px rgba(140,119,96,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(140,119,96,0);
+}
+
+}
+}
 .music-btn:hover{
 
 transform:scale(1.08);
@@ -659,13 +705,29 @@ box-shadow:
 @keyframes photoAppear{
 
 from{
+
 opacity:0;
-transform:translateY(40px);
+
+transform:
+translateY(60px)
+scale(.96);
+
+filter:blur(5px);
+
 }
 
 to{
+
 opacity:1;
-transform:translateY(0);
+
+transform:
+translateY(0)
+scale(1);
+
+filter:blur(0);
+
+}
+
 }
 
 }  
