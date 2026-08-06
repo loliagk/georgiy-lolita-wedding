@@ -557,6 +557,38 @@ transform:translateY(0);
 }
 
 }  
+
+.invite-card{
+
+background:#fffaf3;
+
+padding:40px 25px;
+
+max-width:550px;
+
+margin:0 auto 60px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.12);
+
+animation:cardShow 1.5s ease;
+
+}
+
+
+@keyframes cardShow{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
 </style>
 
 </head>
@@ -593,7 +625,7 @@ L
 
 <section class="invite hidden">
 
-<div class="invite-content">
+<div class="invite-card">
 
 <img class="main-photo" src="couple.jpg">
 
@@ -604,6 +636,10 @@ L
 <h2>
 12 • 09 • 2026
 </h2>
+
+</div>
+
+<div class="invite-content">
 
 
 <h1>
