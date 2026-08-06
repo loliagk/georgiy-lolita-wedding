@@ -587,31 +587,43 @@ background:#8c7760;
 
 position:fixed;
 
-top:20px;
+top:25px;
+right:25px;
 
-right:20px;
-
-width:50px;
-
-height:50px;
-
-border:none;
+width:55px;
+height:55px;
 
 border-radius:50%;
 
-background:white;
+border:1px solid #d8c6aa;
 
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+background:#fffaf3;
 
-cursor:pointer;
+color:#8c7760;
 
 font-size:20px;
 
-z-index:9999;
+cursor:pointer;
 
-opacity:1;
+z-index:999;
 
-pointer-events:auto;
+box-shadow:
+0 10px 25px rgba(0,0,0,.15);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+transition:.3s;
+
+}
+
+
+.music-btn:hover{
+
+transform:scale(1.08);
+
+background:#f1e4d2;
 
 }
 
@@ -1117,18 +1129,31 @@ value="Георгий & Лолита | 12 сентября 2026">
     <source src="compress.flac" type="audio/flac">
 </audio>
 
-<button class="music-btn" onclick="toggleMusic()">♫</button>
+<button class="music-btn" onclick="toggleMusic()">
+▶
+</button>
 <script>
 const music = document.getElementById("music");
+const musicBtn = document.querySelector(".music-btn");
 
-function toggleMusic() {
-    if (music.paused) {
-        music.play();
-        document.querySelector(".music-btn").textContent = "❚❚";
-    } else {
-        music.pause();
-        document.querySelector(".music-btn").textContent = "♫";
-    }
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+musicBtn.textContent="❚❚";
+
+}
+
+else{
+
+music.pause();
+
+musicBtn.textContent="▶";
+
+}
+
 }
 </script>
 </body>
