@@ -607,17 +607,14 @@ cursor:pointer;
 
 z-index:999;
 
-box-shadow:
-0 10px 25px rgba(0,0,0,.15);
-
 display:flex;
 align-items:center;
 justify-content:center;
 
-transition:.3s;
+box-shadow:
+0 10px 25px rgba(0,0,0,.15);
 
 }
-
 
 .music-btn:hover{
 
@@ -1128,10 +1125,7 @@ value="Георгий & Лолита | 12 сентября 2026">
 <audio id="music" loop>
     <source src="compress.flac" type="audio/flac">
 </audio>
-
-<button class="music-btn" onclick="toggleMusic()">
-▶
-</button>
+<button class="music-btn" onclick="toggleMusic()">▶</button>
 <script>
 const music = document.getElementById("music");
 const musicBtn = document.querySelector(".music-btn");
