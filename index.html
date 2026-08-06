@@ -635,6 +635,10 @@ document.querySelector(".hero").style.display="none";
 document.querySelector(".invite")
 .classList.remove("hidden");
 
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 },900);
 
@@ -763,7 +767,11 @@ placeholder="Ваши пожелания">
 
 
 <input type="hidden" name="_subject" value="Ответ на приглашение Георгий и Лолита">
-
+  
+<input 
+type="hidden" 
+name="Свадьба" 
+value="Георгий & Лолита | 12 сентября 2026">
 
 <button type="submit">
 ОТПРАВИТЬ
@@ -812,7 +820,9 @@ form.innerHTML = `
 
 <p>
 Ваш ответ получен.<br>
-Будем ждать встречи с вами!
+Мы будем очень рады разделить этот день вместе с вами.
+<br><br>
+До встречи 12 сентября 2026 ✨
 </p>
 
 `;
