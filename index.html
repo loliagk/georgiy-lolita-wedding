@@ -800,25 +800,31 @@ box-shadow:
 0 20px 60px rgba(0,0,0,.12);
 
 }
+
+
 .invite-card:before{
-border:1px solid rgba(140,119,96,.45);
-}
 
-@keyframes cardShow{
+content:"";
 
-from{
-opacity:0;
-transform:translateY(60px);
-}
+position:absolute;
 
-to{
-opacity:1;
-transform:translateY(0);
+inset:12px;
 
+border:1px solid rgba(140,119,96,.35);
+
+pointer-events:none;
 
 }
 
 
+.invite-card h1,
+.invite-card h2{
+
+position:relative;
+
+z-index:2;
+
+}
 .program{
 
 margin:60px auto;
@@ -898,23 +904,6 @@ margin:20px auto;
 
 }
 
-.invite-card h1,
-.invite-card h2{
-position:relative;
-z-index:2;
-}
-
-.invite-card{
-border:1px solid rgba(140,119,96,.35);
-}
-
-.invite-card:before{
-content:"";
-position:absolute;
-inset:12px;
-border:1px solid rgba(140,119,96,.25);
-pointer-events:none;
-}
 </style>
 
 </head>
