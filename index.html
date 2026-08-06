@@ -861,58 +861,7 @@ value="Георгий & Лолита | 12 сентября 2026">
 
 </section>
 
-<script>
 
-
-method:"POST",
-
-body:data,
-
-headers:{
-"Accept":"application/json"
-}
-
-})
-.then(response => {
-
-if(response.ok){
-
-form.innerHTML = `
-
-<h2>
-Спасибо 🤍
-</h2>
-
-<p>
-Ваш ответ получен.<br>
-Мы будем очень рады разделить этот день вместе с вами.
-<br><br>
-До встречи 12 сентября 2026 ✨
-</p>
-
-`;
-
-}
-
-else{
-
-form.innerHTML = `
-
-<p>
-Произошла ошибка.<br>
-Попробуйте ещё раз.
-</p>
-
-`;
-
-}
-
-})
-
-});
-
-
-</script>
 <audio id="music" loop>
     <source src="paradise.mp3" type="audio/mpeg">
 </audio>
