@@ -168,11 +168,21 @@ height:300px;
 }
 body{
 margin:0;
-background:#faf7f2;
+
+background:
+linear-gradient(
+135deg,
+rgba(250,247,242,.96),
+rgba(242,233,220,.96)
+),
+url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+
+background-size:300px;
+
 color:#2d2b29;
+
 font-family:'Cormorant Garamond',serif;
 }
-
 
 .hero{
 height:100vh;
@@ -311,11 +321,9 @@ display:none;
 
 min-height:100vh;
 
-padding:60px 25px;
+padding:80px 25px;
 
 display:flex;
-
-flex-direction:column;
 
 justify-content:center;
 
@@ -324,6 +332,51 @@ text-align:center;
 background:#faf7f2;
 
 animation:fade 1.5s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.invite:before{
+
+content:"";
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+top:20px;
+left:-50px;
+
+background:
+url("https://cdn-icons-png.flaticon.com/512/2909/2909765.png")
+center/contain no-repeat;
+
+opacity:.08;
+
+}
+
+
+.invite:after{
+
+content:"";
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+bottom:20px;
+right:-50px;
+
+background:
+url("https://cdn-icons-png.flaticon.com/512/2909/2909765.png")
+center/contain no-repeat;
+
+opacity:.08;
 
 }
 
