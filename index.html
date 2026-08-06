@@ -946,11 +946,16 @@ document.querySelector(".invite")
 
 const music = document.getElementById("music");
 
-music.play().catch(() => {});
+music.volume = 0.4;
 
-document.querySelector(".music-btn").classList.add("show");
-document.querySelector(".music-btn").textContent = "❚❚";
-
+music.play()
+.then(() => {
+    document.querySelector(".music-btn").classList.add("show");
+    document.querySelector(".music-btn").textContent = "❚❚";
+})
+.catch(error => {
+    console.log(error);
+});
 window.scrollTo({
 top:0,
 behavior:"smooth"
