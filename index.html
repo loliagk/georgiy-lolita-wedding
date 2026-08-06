@@ -164,5 +164,27 @@ letter-spacing:7px;
 </section>
 
 
-</body>
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="playMusic()">
+♫ Включить музыку
+</button>
+
+
+<script>
+function playMusic(){
+let music = document.getElementById("music");
+
+if(music.paused){
+music.play();
+document.querySelector(".music-btn").innerHTML="♫ Музыка играет";
+}
+else{
+music.pause();
+document.querySelector(".music-btn").innerHTML="♫ Включить музыку";
+}
+}
+</script>
 </html>
