@@ -718,7 +718,7 @@ seconds + " секунд";
 </p>
 
 
-<form action="https://formspree.io/f/xrpzbpnq" method="POST">
+<form id="rsvpForm">
 
 
 <input 
@@ -768,7 +768,67 @@ placeholder="Ваши пожелания">
 
 </section>
 
+<script>
 
+document.getElementById("rsvpForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+
+let form = e.target;
+
+let data = new FormData(form);
+
+
+fetch("https://formspree.io/f/xrpzbpnq", {
+
+method:"POST",
+
+body:data,
+
+headers:{
+"Accept":"application/json"
+}
+
+})
+.then(response => {
+
+if(response.ok){
+
+form.innerHTML = `
+
+<h2>
+Спасибо 🤍
+</h2>
+
+<p>
+Ваш ответ получен.<br>
+Будем ждать встречи с вами!
+</p>
+
+`;
+
+}
+
+else{
+
+form.innerHTML = `
+
+<p>
+Произошла ошибка.<br>
+Попробуйте ещё раз.
+</p>
+
+`;
+
+}
+
+})
+
+});
+
+
+</script>
 </body>
 
 </html>
