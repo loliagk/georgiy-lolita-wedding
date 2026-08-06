@@ -686,6 +686,10 @@ document.querySelector(".hero").style.display="none";
 document.querySelector(".invite")
 .classList.remove("hidden");
 
+const music = document.getElementById("music");
+
+music.play().catch(() => {});
+
 window.scrollTo({
 top:0,
 behavior:"smooth"
@@ -840,16 +844,6 @@ value="Георгий & Лолита | 12 сентября 2026">
 
 <script>
 
-
-e.preventDefault();
-
-
-let form = e.target;
-
-let data = new FormData(form);
-
-
-fetch("https://formspree.io/f/xrpzbpnq", {
 
 method:"POST",
 
