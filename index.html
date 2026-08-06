@@ -1,135 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Георгий & Лолита | 12.09.2026</title>
-.music-btn{
-position:fixed;
-bottom:25px;
-right:25px;
 
-padding:12px 25px;
-
-background:rgba(255,255,255,0.75);
-border:1px solid #555;
-
-font-size:12px;
-letter-spacing:2px;
-
-z-index:10;
-}
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300&display=swap');
+
 
 *{
 box-sizing:border-box;
 }
 
+
 body{
 margin:0;
-background:#faf7f2;
-color:#2c2c2c;
+background:#f8f4ee;
+color:#2d2b29;
+font-family:'Cormorant Garamond', serif;
 }
 
+
+/* ПЕРВЫЙ ЭКРАН */
+
 .hero{
+
 height:100vh;
-position:relative;
+
 display:flex;
 justify-content:center;
 align-items:center;
-text-align:center;
 
 background:
 linear-gradient(
-rgba(255,255,255,0.35),
-rgba(250,247,242,0.65)
+rgba(250,245,238,.35),
+rgba(250,245,238,.65)
 ),
 url("IMG_0605.JPG");
 
 background-size:cover;
 background-position:center;
+
 }
 
-.hero:before{
-content:"";
-position:absolute;
-inset:25px;
-border:1px solid rgba(255,255,255,0.7);
-}
 
-.content{
+.envelope{
+
+width:330px;
+height:220px;
+
+background:#fffaf3;
+
 position:relative;
-animation:show 2s ease;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+cursor:pointer;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.15);
+
+border:1px solid rgba(150,120,90,.3);
+
+transition:.8s;
+
 }
+
+
+.envelope:before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+border-left:165px solid transparent;
+border-right:165px solid transparent;
+border-top:110px solid #eee2d3;
+
+transform-origin:top;
+
+transition:.8s;
+
+}
+
+
+.envelope.open:before{
+
+transform:rotateX(180deg);
+
+}
+
+
+.envelope-text{
+
+position:relative;
+z-index:2;
+
+text-align:center;
+
+}
+
 
 .names{
-font-family:'Cormorant Garamond',serif;
-font-size:75px;
+
+font-size:45px;
+
+letter-spacing:8px;
+
 font-weight:300;
-letter-spacing:12px;
-line-height:1;
+
 }
 
-.and{
-font-size:35px;
-margin:20px;
-font-family:'Cormorant Garamond',serif;
-}
 
 .date{
-margin-top:35px;
+
 font-family:'Montserrat',sans-serif;
-font-size:16px;
-letter-spacing:8px;
+
+font-size:13px;
+
+letter-spacing:5px;
+
+margin-top:20px;
+
 }
 
-.text{
-margin-top:35px;
+
+.click{
+
+margin-top:25px;
+
 font-family:'Montserrat',sans-serif;
-font-size:14px;
-line-height:2;
-letter-spacing:2px;
-}
 
-button{
-margin-top:45px;
-padding:15px 45px;
-background:transparent;
-border:1px solid #444;
-font-family:'Montserrat',sans-serif;
-letter-spacing:2px;
-cursor:pointer;
-transition:.4s;
-}
+font-size:11px;
 
-button:hover{
-background:#2c2c2c;
-color:white;
-}
+letter-spacing:3px;
 
-@keyframes show{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 
-@media(max-width:600px){
+.hidden{
 
-.names{
-font-size:45px;
-letter-spacing:7px;
-}
+display:none;
 
 }
+
 
 </style>
 
@@ -141,17 +164,17 @@ letter-spacing:7px;
 
 <section class="hero">
 
-<div class="content">
+
+<div class="envelope" onclick="openInvite()">
+
+
+<div class="envelope-text">
 
 <div class="names">
 ГЕОРГИЙ
-</div>
-
-<div class="and">
+<br>
 &
-</div>
-
-<div class="names">
+<br>
 ЛОЛИТА
 </div>
 
@@ -161,44 +184,39 @@ letter-spacing:7px;
 </div>
 
 
-<div class="text">
-ПРИГЛАШАЕМ ВАС<br>
-РАЗДЕЛИТЬ С НАМИ<br>
-САМЫЙ ВАЖНЫЙ ДЕНЬ
-</div>
-
-
-<button>
+<div class="click">
 ОТКРЫТЬ ПРИГЛАШЕНИЕ
-</button>
+</div>
 
 
 </div>
+
+
+</div>
+
 
 </section>
 
 
-<audio id="music" loop>
-<source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<button class="music-btn" onclick="playMusic()">
-♫ Включить музыку
-</button>
-
-
 <script>
-function playMusic(){
-let music = document.getElementById("music");
 
-if(music.paused){
-music.play();
-document.querySelector(".music-btn").innerHTML="♫ Музыка играет";
+function openInvite(){
+
+document.querySelector(".envelope")
+.classList.add("open");
+
+
+setTimeout(()=>{
+
+alert("Приглашение открыто 🤍");
+
+},800);
+
 }
-else{
-music.pause();
-document.querySelector(".music-btn").innerHTML="♫ Включить музыку";
-}
-}
+
 </script>
+
+
+</body>
+
 </html>
