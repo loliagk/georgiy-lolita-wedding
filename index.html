@@ -7,135 +7,162 @@
 <title>Георгий & Лолита | 12.09.2026</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: "Times New Roman", serif;
-    background: #faf8f5;
-    color: #2d2d2d;
-}
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
-    background:
-    linear-gradient(
-    rgba(250,248,245,0.45),
-    rgba(250,248,245,0.65)
-    ),
-    url("IMG_0605.JPG");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300&display=swap');
 
-    background-size: cover;
-    background-position: center;
+*{
+box-sizing:border-box;
 }
 
-.content {
-    animation: fade 2s ease;
+body{
+margin:0;
+background:#faf7f2;
+color:#2c2c2c;
 }
 
-h1 {
-    font-size: 60px;
-    font-weight: 300;
-    letter-spacing: 8px;
-    margin: 0;
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:
+linear-gradient(
+rgba(255,255,255,0.35),
+rgba(250,247,242,0.65)
+),
+url("IMG_0605.JPG");
+
+background-size:cover;
+background-position:center;
 }
 
-.date {
-    margin-top: 30px;
-    font-size: 22px;
-    letter-spacing: 5px;
+.hero:before{
+content:"";
+position:absolute;
+inset:25px;
+border:1px solid rgba(255,255,255,0.7);
 }
 
-.text {
-    margin-top: 40px;
-    font-size: 18px;
+.content{
+position:relative;
+animation:show 2s ease;
 }
 
-button {
-    margin-top: 40px;
-    padding: 15px 40px;
-    background: transparent;
-    border: 1px solid #2d2d2d;
-    cursor: pointer;
-    font-size: 16px;
+.names{
+font-family:'Cormorant Garamond',serif;
+font-size:75px;
+font-weight:300;
+letter-spacing:12px;
+line-height:1;
 }
 
-button:hover {
-    background: #2d2d2d;
-    color:white;
+.and{
+font-size:35px;
+margin:20px;
+font-family:'Cormorant Garamond',serif;
 }
 
-@keyframes fade {
-    from {
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to {
-        opacity:1;
-        transform:translateY(0);
-    }
+.date{
+margin-top:35px;
+font-family:'Montserrat',sans-serif;
+font-size:16px;
+letter-spacing:8px;
 }
+
+.text{
+margin-top:35px;
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+line-height:2;
+letter-spacing:2px;
+}
+
+button{
+margin-top:45px;
+padding:15px 45px;
+background:transparent;
+border:1px solid #444;
+font-family:'Montserrat',sans-serif;
+letter-spacing:2px;
+cursor:pointer;
+transition:.4s;
+}
+
+button:hover{
+background:#2c2c2c;
+color:white;
+}
+
+@keyframes show{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 
 @media(max-width:600px){
-h1{
-font-size:38px;
+
+.names{
+font-size:45px;
+letter-spacing:7px;
 }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <section class="hero">
 
 <div class="content">
 
-<h1>
-ГЕОРГИЙ<br>
+<div class="names">
+ГЕОРГИЙ
+</div>
+
+<div class="and">
 &
-<br>
+</div>
+
+<div class="names">
 ЛОЛИТА
-</h1>
+</div>
+
 
 <div class="date">
 12 • 09 • 2026
 </div>
 
+
 <div class="text">
-Приглашаем вас разделить<br>
-самый важный день нашей жизни
+ПРИГЛАШАЕМ ВАС<br>
+РАЗДЕЛИТЬ С НАМИ<br>
+САМЫЙ ВАЖНЫЙ ДЕНЬ
 </div>
 
-<button onclick="document.getElementById('invite').scrollIntoView()">
-Открыть приглашение
+
+<button>
+ОТКРЫТЬ ПРИГЛАШЕНИЕ
 </button>
 
-</div>
-
-</section>
-
-<section id="invite" style="height:100vh; display:flex; justify-content:center; align-items:center; text-align:center;">
-
-<div>
-<h2>Дорогие родные и друзья!</h2>
-
-<p>
-Мы будем счастливы разделить с вами<br>
-самый важный день нашей жизни.
-</p>
-
-<p>
-12 сентября 2026
-</p>
 
 </div>
 
 </section>
+
+
 </body>
-    
 </html>
-
