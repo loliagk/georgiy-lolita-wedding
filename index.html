@@ -15,7 +15,81 @@
 *{
 box-sizing:border-box;
 }
+.gallery img{
 
+opacity:0;
+transform:translateY(30px);
+animation:photoShow 1.5s ease forwards;
+
+}
+
+
+.gallery img:nth-child(2){
+animation-delay:.2s;
+}
+
+.gallery img:nth-child(3){
+animation-delay:.4s;
+}
+
+.gallery img:nth-child(4){
+animation-delay:.6s;
+}
+
+.gallery img:nth-child(5){
+animation-delay:.8s;
+}
+
+.gallery img:nth-child(6){
+animation-delay:1s;
+}
+
+
+@keyframes photoShow{
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+.final{
+
+min-height:60vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:50px 25px;
+
+background:#f5efe7;
+
+}
+
+
+.final h2{
+
+font-size:45px;
+
+font-weight:300;
+
+}
+
+
+.final p{
+
+font-size:22px;
+
+line-height:1.7;
+
+}
 .gallery{
 
 display:grid;
@@ -548,7 +622,23 @@ seconds + " секунд";
 
 },1000);
 
+<section class="final">
 
+<div>
+
+<h2>
+До встречи на нашей свадьбе 🤍
+</h2>
+
+<p>
+Спасибо, что разделите с нами этот особенный день.
+<br>
+Будем счастливы видеть вас рядом.
+</p>
+
+</div>
+
+</section>
 </script>
 
 
