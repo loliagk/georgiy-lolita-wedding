@@ -707,11 +707,9 @@ filter:blur(0);
 }  
 
 .invite-card{
-
 background:#fffaf3;
 
-
-padding:50px 35px;
+padding:40px 25px;
 
 max-width:550px;
 
@@ -721,43 +719,17 @@ margin:0 auto 60px;
 
 position:relative;
 
-border:1px solid rgba(140,119,96,.45);
+border:1px solid rgba(140,119,96,.25);
 
 box-shadow:
-0 20px 60px rgba(0,0,0,.12);
-
+0 15px 40px rgba(0,0,0,.08);
 }
-
 
 /* двойная элегантная рамка */
 
-.invite-card:before{
-
-content:"";
-
-position:absolute;
-
-inset:15px;
-
-border:1px solid rgba(140,119,96,.35);
-
-pointer-events:none;
-
-}
-
-
+.invite-card:before,
 .invite-card:after{
-
-content:"";
-
-position:absolute;
-
-inset:25px;
-
-border:1px solid rgba(140,119,96,.18);
-
-pointer-events:none;
-
+display:none;
 }
 
 
