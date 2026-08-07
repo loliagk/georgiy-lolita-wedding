@@ -73,34 +73,6 @@ background:#f5efe7;
 }
 
 
-@media(max-width:600px){
-
-.hero{
-height:100svh;
-}
-
-
-.envelope{
-width:320px;
-height:220px;
-}
-
-
-.envelope-content .names{
-font-size:48px;
-letter-spacing:8px;
-white-space:nowrap;
-}
-
-
-.open-text{
-font-size:10px;
-letter-spacing:2px;
-}
-
-}
-
-
 .invite{
 padding:50px 20px;
 }
@@ -158,39 +130,6 @@ transition:.5s;
 .gallery img:hover{
 
 transform:scale(1.03);
-
-}
-
-
-@media(max-width:600px){
-
-.hero{
-height:100svh;
-}
-
-
-.envelope{
-width:320px;
-height:220px;
-}
-
-
-.envelope-content .names{
-font-size:48px;
-letter-spacing:8px;
-white-space:nowrap;
-}
-
-
-.main-photo{
-height:420px;
-object-fit:contain;
-}
-
-
-.invite{
-padding:50px 20px;
-}
 
 }
 
@@ -969,6 +908,41 @@ background:#8c7760;
 
 margin:20px auto;
 
+
+}
+
+@media (max-width:600px){
+
+    .hero{
+        width:100vw;
+        height:100svh;
+        min-height:100svh;
+        padding:0;
+        margin:0;
+    }
+
+    .envelope{
+        width:100vw;
+        height:100svh;
+        min-width:100vw;
+        min-height:100svh;
+    }
+
+    .envelope-content{
+        width:100%;
+        top:68%;
+    }
+
+    .envelope-content .names{
+        font-size:48px;
+        letter-spacing:8px;
+        white-space:nowrap;
+    }
+
+    .open-text{
+        font-size:10px;
+        letter-spacing:2px;
+    }
 
 }
 </style>
