@@ -710,39 +710,23 @@ pointer-events:auto;
 }
 
 .main-photo{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+    object-position:center;
+    margin:0 auto 40px;
+    display:block;
 
-width:100%;
-max-width:500px;
+    opacity:0;
+    animation:photoAppear 2s ease forwards;
 
-height:auto;
-max-height:600px;
+    border:1px solid rgba(140,119,96,.35);
+    background:#fffaf3;
 
-object-fit:contain;
-object-position:center;
-
-margin-bottom:40px;
-
-display:block;
-
-clip-path:polygon(
-35px 0,
-100% 0,
-100% 100%,
-0 100%,
-0 35px
-);
-
-opacity:0;
-
-animation:photoAppear 2s ease forwards;
-
-border:1px solid rgba(140,119,96,.35);
-
-background:#fffaf3;
-
-box-shadow:
-0 25px 60px rgba(0,0,0,.15);
-
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.15);
 }
 @keyframes photoAppear{
 
