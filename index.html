@@ -725,11 +725,19 @@ object-position:center center;
 
 margin-bottom:40px;
 
+display:block;
+
+clip-path:polygon(
+35px 0,
+100% 0,
+100% 100%,
+0 100%,
+0 35px
+);
+
 opacity:0;
 
 animation:photoAppear 2s ease forwards;
-
-border-radius:0 0 40px 0;
 
 border:1px solid rgba(140,119,96,.35);
 
@@ -739,7 +747,6 @@ box-shadow:
 0 25px 60px rgba(0,0,0,.15);
 
 }
-
 @keyframes photoAppear{
 
 from{
@@ -805,9 +812,6 @@ inset:15px;
 border:1px solid rgba(140,119,96,.35);
 
 pointer-events:none;
-
-overflow:hidden;
-
 
 }
 
