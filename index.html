@@ -218,20 +218,22 @@ font-weight:300;
 
 }
 .hero{
-height:100vh;
+height:100svh;
+width:100%;
 display:flex;
 justify-content:center;
 align-items:center;
 background:#efe6d8;
+overflow:hidden;
 }
 
 
 .envelope{
 
-width:600px;
-height:400px;
+width:100vw;
+height:100svh;
 
-perspective:1000px;
+perspective:1200px;
 
 background:
 linear-gradient(
@@ -254,7 +256,7 @@ top:0;
 left:0;
 
 width:100%;
-height:50%;
+height:55%;
 
 background:
 linear-gradient(
@@ -971,17 +973,7 @@ background:#8c7760;
 margin:20px auto;
 
 }
-@media(max-width:600px){
 
-.envelope{
-width:320px;
-height:220px;
-overflow:hidden;
-}
-
-.envelope:before{
-height:110px;
-}
 
 }
 </style>
