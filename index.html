@@ -240,6 +240,9 @@ linear-gradient(
 #e7d5bb
 );
 
+position:relative;
+overflow:hidden;
+
 }
 .envelope:before{
 
@@ -248,15 +251,16 @@ content:"";
 position:absolute;
 
 top:0;
-left:0;
+left:50%;
+
+transform:translateX(-50%);
 
 width:90vw;
-height:75vh;
 max-width:600px;
 
+height:75vh;
 
 background:
-
 linear-gradient(
 135deg,
 #f3e5d1,
@@ -265,7 +269,7 @@ linear-gradient(
 
 clip-path:polygon(0 0,100% 0,50% 100%);
 
-transform-origin:top;
+transform-origin:top center;
 
 transition:1.2s;
 
