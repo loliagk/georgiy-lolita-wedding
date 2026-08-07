@@ -282,7 +282,7 @@ color:#8c7760;
 text-shadow:
 0 2px 5px rgba(0,0,0,.15);
 
-animation:softAppear 2s ease;
+animation:softAppear 2s ease .3s both;
 animation-delay:.3s;
 animation-fill-mode:both;
 
@@ -653,11 +653,6 @@ transform:scale(1.08);
 background:#f1e4d2;
 
 }
-
-.music-btn:hover{
-transform:scale(1.08);
-
-}
 .music-btn.show{
 opacity:1;
 pointer-events:auto;
@@ -681,7 +676,7 @@ translateY(60px)
 scale(.94);
 
 animation:
-photoReveal 2.8s cubic-bezier(.22,1,.36,1) forwards;
+photoReveal 2.8s cubic-bezier(.22,1,.36,1) both;
 
 animation-delay:1.5s;
 
