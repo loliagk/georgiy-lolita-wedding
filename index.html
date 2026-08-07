@@ -218,66 +218,79 @@ font-weight:300;
 
 }
 .hero{
-height:100svh;
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-background:#efe6d8;
-overflow:hidden;
+    width:100%;
+    height:100svh;
+    min-height:100svh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#efe6d8;
+
+    overflow:hidden;
 }
 
 
 .envelope{
 
-width:100vw;
-height:100svh;
+    width:100%;
+    height:100%;
 
-perspective:1200px;
+    min-width:100%;
+    min-height:100%;
 
-background:
-linear-gradient(
-135deg,
-#fff8ee,
-#e7d5bb
-);
+    position:relative;
 
-position:relative;
-overflow:hidden;
+    overflow:hidden;
 
+    perspective:1200px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff8ee,
+        #e7d5bb
+    );
 }
 .envelope:before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-top:0;
-left:0;
+    top:0;
+    left:0;
 
-width:100%;
-height:55%;
+    width:100%;
+    height:55%;
 
-background:
-linear-gradient(
-135deg,
-#f3e5d1,
-#dcc5a3
-);
+    background:
+    linear-gradient(
+        135deg,
+        #f3e5d1,
+        #dcc5a3
+    );
 
-clip-path:polygon(0 0,100% 0,50% 100%);
+    clip-path:polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
 
-transform-origin:center top;
+    transform-origin:center top;
 
-transition:1.2s ease;
+    transition:
+        transform 1.2s ease;
 
-z-index:3;
-
+    z-index:3;
 }
+
+
 .envelope.open:before{
 
-transform:rotateX(180deg) 
-
+    transform:
+        rotateX(180deg);
 }
 
 .envelope.open:after{
@@ -956,7 +969,6 @@ background:#8c7760;
 
 margin:20px auto;
 
-}
 
 }
 </style>
