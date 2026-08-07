@@ -245,7 +245,7 @@ transform:translateX(-50%) scale(.7);
 
 position:absolute;
 
-top:68%;
+top:64%;
 left:50%;
 
 transform:translate(-50%,-50%);
@@ -670,7 +670,6 @@ pointer-events:auto;
     height:auto;
 
     object-fit:contain;
-    object-position:center;
 
     margin:0 auto 40px;
     display:block;
@@ -683,11 +682,17 @@ pointer-events:auto;
 
     filter:blur(0);
 
-animation:
-photoReveal 2.8s cubic-bezier(.22,1,.36,1) forwards;
-animation-delay:1.5s;
-   box-shadow:
-0 25px 70px rgba(0,0,0,.12);
+    animation:
+    photoReveal 2.8s cubic-bezier(.22,1,.36,1) forwards;
+
+    animation-delay:2.2s;
+
+    border:1px solid rgba(140,119,96,.25);
+    padding:8px;
+    background:#fffaf3;
+
+    box-shadow:
+    0 20px 45px rgba(140,119,96,.15);
 }
 
 
@@ -935,7 +940,14 @@ margin:20px auto;
     .names-date h2{
         font-size:22px;
         letter-spacing:3px;
-    }
+    
+    @media (max-width:600px){
+
+.envelope-content .names{
+    font-size:38px;
+    letter-spacing:4px;
+    white-space:nowrap;
+}
 
 }
 </style>
