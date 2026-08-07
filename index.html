@@ -197,7 +197,6 @@ font-weight:300;
     content:"";
 
     position:absolute;
-
     top:0;
     left:0;
 
@@ -220,7 +219,7 @@ font-weight:300;
     transform-origin:center top;
 
     transition:
-        transform 1.2s ease;
+        transform 2s cubic-bezier(.4,0,.2,1);
 
     z-index:3;
 }
@@ -228,8 +227,10 @@ font-weight:300;
 
 .envelope.open:before{
 
-    transform:
-        rotateX(180deg);
+transform:
+rotateX(180deg)
+translateY(-5px);
+
 }
 
 .envelope.open:after{
@@ -283,6 +284,7 @@ text-shadow:
 0 2px 5px rgba(0,0,0,.15);
 
 animation:softAppear 2s ease;
+animation-delay:.3s;
 
 }
 
@@ -662,36 +664,64 @@ pointer-events:auto;
 }
 
 .main-photo{
+
     width:100%;
     max-width:500px;
     height:auto;
+
     object-fit:contain;
     object-position:center;
+
     margin:0 auto 40px;
     display:block;
 
     opacity:0;
-    animation:photoAppear 2s ease forwards;
+
+    transform:
+    translateY(60px)
+    scale(.94);
+
+    filter:blur(6px);
+
+    animation:
+    photoReveal 2.2s cubic-bezier(.25,.8,.25,1) forwards;
+
+    animation-delay:1.5s;
 
     box-shadow:
-    0 15px 40px rgba(0,0,0,.12);
+    0 20px 50px rgba(0,0,0,.12);
 }
 
-@keyframes photoAppear{
 
-from{
+@keyframes photoReveal{
+
+0%{
 
 opacity:0;
 
 transform:
 translateY(60px)
-scale(.96);
+scale(.94);
 
-filter:blur(5px);
+filter:blur(8px);
 
 }
 
-to{
+
+60%{
+
+opacity:1;
+
+transform:
+translateY(-5px)
+scale(1.01);
+
+filter:blur(0);
+
+}
+
+
+100%{
 
 opacity:1;
 
@@ -699,12 +729,9 @@ transform:
 translateY(0)
 scale(1);
 
-filter:blur(0);
-
 }
 
-
-}  
+}
 
 .invite-card{
 background:#fffaf3;
