@@ -681,11 +681,10 @@ pointer-events:auto;
     translateY(60px)
     scale(.94);
 
-    filter:blur(6px);
+    filter:blur(0);
 
-    animation:
+animation:
 photoReveal 2.8s cubic-bezier(.22,1,.36,1) forwards;
-
 animation-delay:1.5s;
    box-shadow:
 0 25px 70px rgba(0,0,0,.12);
@@ -695,17 +694,13 @@ animation-delay:1.5s;
 @keyframes photoReveal{
 
 0%{
-
 opacity:0;
 
 transform:
 translateY(60px)
 scale(.94);
 
-filter:blur(8px);
-
 }
-
 
 60%{
 
@@ -715,10 +710,7 @@ transform:
 translateY(-5px)
 scale(1.01);
 
-filter:blur(0);
-
 }
-
 
 100%{
 
@@ -727,8 +719,6 @@ opacity:1;
 transform:
 translateY(0)
 scale(1);
-
-}
 
 }
 
