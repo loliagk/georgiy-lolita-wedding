@@ -665,37 +665,30 @@ pointer-events:auto;
 
 .main-photo{
 
-    width:100%;
-    max-width:500px;
-    height:auto;
+width:100%;
+max-width:500px;
 
-    object-fit:contain;
+height:auto;
 
-    margin:0 auto 40px;
-    display:block;
+margin:0 auto 40px;
 
-    opacity:0;
+display:block;
 
-    transform:
-    translateY(60px)
-    scale(.94);
+opacity:0;
 
-    filter:blur(0);
+transform:
+translateY(60px)
+scale(.94);
 
-    animation:
-    photoReveal 2.8s cubic-bezier(.22,1,.36,1) forwards;
+animation:
+photoReveal 2.8s cubic-bezier(.22,1,.36,1) forwards;
 
-    animation-delay:2.2s;
+animation-delay:1.5s;
 
-    border:1px solid rgba(140,119,96,.25);
-    padding:8px;
-    background:#fffaf3;
+box-shadow:
+0 25px 70px rgba(0,0,0,.12);
 
-    box-shadow:
-    0 20px 45px rgba(140,119,96,.15);
 }
-
-
 @keyframes photoReveal{
 
 0%{
@@ -727,7 +720,10 @@ scale(1);
 
 }
 
+}
+
 .invite-card{
+
 background:#fffaf3;
 
 padding:40px 25px;
@@ -740,12 +736,12 @@ margin:0 auto 60px;
 
 position:relative;
 
-border:1px solid rgba(140,119,96,.25);
+border:1px solid #cdb89d;
 
 box-shadow:
-0 15px 40px rgba(0,0,0,.08);
-}
+0 20px 50px rgba(0,0,0,.10);
 
+}
 /* двойная элегантная рамка */
 
 .invite-card:before,
@@ -947,6 +943,16 @@ margin:20px auto;
     font-size:38px;
     letter-spacing:4px;
     white-space:nowrap;
+
+
+@media (max-width:600px){
+
+.envelope-content .names{
+
+font-size:38px;
+letter-spacing:3px;
+white-space:nowrap;
+
 }
 
 }
